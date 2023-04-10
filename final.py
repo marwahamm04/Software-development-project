@@ -18,7 +18,9 @@ def coin_Calc(c, quarter, dime, nickle, penny):
     @param penny this provides the user the penny outcome change
     """
     if c >= 0:
-
+        """This if statement sets the varible that is greater than zero
+        to run the floor division of quarters, dimes, nickles, pennies. 
+        """
         if c >= 25:
             quarter = c // 25
             c = c - 25 * quarter
