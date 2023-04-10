@@ -62,7 +62,7 @@ def main():
 
         user = input (f"Want to calculate another amount? (y/n): ")
 
-    print(f"\nBye!")
+    print(f"\nBye, have a good day and don't drop out!")
 
 if __name__ == "__main__":
     main()
