@@ -8,18 +8,18 @@ Output(s):
 c = 0
 
 
-def coin_Calc(c, quarter, dime, nickle, penny):
+def coin_Calc(c, quarter, dime, nickel, penny):
     """This method calculates the amount of coins provided by the user and divides 
-    them by quarters, dimes, nickles, and pennies. 
+    them by quarters, dimes, nickel, and pennies. 
     @param c this is the users coin input
     @param quarter this provides the user the quarters outcome change 
     @param dime this provides the user the dime outcome change
-    @param nickle this provides the user the nickle outcome change
+    @param nickel this provides the user the nickel outcome change
     @param penny this provides the user the penny outcome change
     """
     if c >= 0:
         """This if statement sets the varible that is greater than zero
-        to run the floor division of quarters, dimes, nickles, pennies. 
+        to run the floor division of quarters, dimes, nickel, pennies. 
         """
         if c >= 25:
             quarter = c // 25
@@ -28,13 +28,13 @@ def coin_Calc(c, quarter, dime, nickle, penny):
             dime = c // 10
             c = c - 10 * dime
         if c >= 5:
-            nickle = c //5
-            c = c - 5 * nickle
+            nickel = c //5
+            c = c - 5 * nickel
         else:
             penny = c // 1
     else:
         c = 0
-    return quarter, dime, nickle, penny
+    return quarter, dime, nickel, penny
       
       
 
@@ -42,7 +42,7 @@ def main():
     user = "y"
     quarter = 0
     dime = 0
-    nickle = 0
+    nickel = 0
     penny = 0
 
     print("Coin Return Calculator")
@@ -56,11 +56,11 @@ def main():
                 if c <= 0:
                     raise ValueError("Error! Invalid interger entered please try again.")
 
-                q, d, n, p = coin_Calc(c, quarter, dime, nickle, penny)
+                q, d, n, p = coin_Calc(c, quarter, dime, nickel, penny)
         
                 print(f'{q} quarter(s)')
                 print(f'{d} dime(s)')
-                print(f'{n} nickle(s)')
+                print(f'{n} nickel(s)')
                 print(f'{p} penny(ies)')
 
         
