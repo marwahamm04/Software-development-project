@@ -9,7 +9,12 @@ c = 0
 
 
 def coin_Calc(c, quarter, dime, nickle, penny):
+    """This method calculates the amount of coins provided by the user and divides 
+    them by quarters, dimes, nickles, and pennies. 
+    @param c 
+    """
     if c >= 0:
+
         if c >= 25:
             quarter = c // 25
             c = c - 25 * quarter
