@@ -33,7 +33,7 @@ def coin_Calc(c, quarter, dime, nickel, penny):
             nickel = c //5
             c = c - 5 * nickel
         else:
-            penny = c // 1
+            penny = c 
     else:
         c = 0
     return quarter, dime, nickel, penny
