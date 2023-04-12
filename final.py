@@ -8,22 +8,40 @@ Output(s):
 c = 0
 
 
-def coin_Calc(c):
-
-    quarters = c // 25
-    c = c % 25
-
-    dimes = c // 10
-    c = c % 10
-
-    nickels = c // 5
-    c = c % 5
-
-    pennies = c
-
-    return [quarters, dimes, nickels, pennies]
+def coin_Calc(c, quarter, dime, nickel, penny):
+    """This method calculates the amount of coins provided by the user and divides 
+    them by quarters, dimes, nickel, and pennies. 
+    @param c this is the users coin input
+    @param quarter this provides the user the quarters outcome change 
+    @param dime this provides the user the dime outcome change
+    @param nickel this provides the user the nickel outcome change
+    @param penny this provides the user the penny outcome change
+    """
+    if c >= 0:
+        """This if statement sets the varible that is greater than or equal to zero
+        to run the floor division of quarters, dimes, nickel, pennies. 
+        """
+        if c >= 25:
+            """This if statement 
+            """
+            quarter = c // 25
+            c = c - 25 * quarter
+            penny = c 
+        elif c >= 10:
+            dime = c // 10
+            c = c - 10 * dime
+            penny = c 
+        elif c >= 5:
+            nickel = c //5
+            c = c - 5 * nickel
+            penny = c 
+        else:
+            penny = c 
+    else:
+        c = 0
+    return quarter, dime, nickel, penny
       
-
+      
 def main():
     user = "y"
     quarter = 0
@@ -38,10 +56,9 @@ def main():
         while noErr == False:
             try:
                 c = int(input(f"\nEnter change amount to convert: "))
-                noErr = True
 
                 if c <= 0:
-                    raise ValueError("Error! Invalid Integer entered please try again.")
+                    raise ValueError("Error! Invalid interger entered please try again.")
 
                 q, d, n, p = coin_Calc(c, quarter, dime, nickel, penny)
         
@@ -51,6 +68,10 @@ def main():
                 print(f'{p} penny(ies)')
 
         
+                noErr = True
+
+                if c <= 0:
+                    raise ValueError ("Error! Invalid interger entered please try again.")
 
                 
 
