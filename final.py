@@ -8,23 +8,20 @@ Output(s):
 c = 0
 
 
-def coin_Calc(c, quarter, dime, nickel, penny):
-    if c >= 0:
-        if c >= 25:
-            quarter = c // 25
-            c = c - 25 * quarter
-        if c >= 10:
-            dime = c // 10
-            c = c - 10 * dime
-        if c >= 5:
-            nickel = c //5
-            c = c - 5 * nickel
-        else:
-            penny = c // 1
-    else:
-        c = 0
-    return quarter, dime, nickel, penny
-      
+def coin_Calc(c):
+
+    quarters = c // 25
+    c = c % 25
+
+    dimes = c // 10
+    c = c % 10
+
+    nickels = c // 5
+    c = c % 5
+
+    pennies = c
+
+    return [quarters, dimes, nickels, pennies]
       
 
 def main():
@@ -41,9 +38,10 @@ def main():
         while noErr == False:
             try:
                 c = int(input(f"\nEnter change amount to convert: "))
+                noErr = True
 
                 if c <= 0:
-                    raise ValueError("Error! Invalid interger entered please try again.")
+                    raise ValueError("Error! Invalid Integer entered please try again.")
 
                 q, d, n, p = coin_Calc(c, quarter, dime, nickel, penny)
         
@@ -53,7 +51,6 @@ def main():
                 print(f'{p} penny(ies)')
 
         
-                noErr = True
 
                 
 
