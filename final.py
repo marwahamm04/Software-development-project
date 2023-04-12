@@ -26,12 +26,15 @@ def coin_Calc(c, quarter, dime, nickel, penny):
             """
             quarter = c // 25
             c = c - 25 * quarter
-        if c >= 10:
+            penny = c 
+        elif c >= 10:
             dime = c // 10
             c = c - 10 * dime
-        if c >= 5:
+            penny = c 
+        elif c >= 5:
             nickel = c //5
             c = c - 5 * nickel
+            penny = c 
         else:
             penny = c 
     else:
@@ -39,7 +42,6 @@ def coin_Calc(c, quarter, dime, nickel, penny):
     return quarter, dime, nickel, penny
       
       
-
 def main():
     user = "y"
     quarter = 0
@@ -67,6 +69,9 @@ def main():
 
         
                 noErr = True
+
+                if c <= 0:
+                    raise ValueError ("Error! Invalid interger entered please try again.")
 
                 
 
