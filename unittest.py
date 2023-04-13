@@ -1,7 +1,10 @@
 import unittest
-from final import final 
+from final import coin_Calc 
 
-class finalTest(unittest.TestCase):
+class coin_CalcTest(unittest.TestCase):
 
-    def test_should_return_the_correct_interest_rate(self):
-        d
+    def test_if_it_is_positive_number(self):
+        acc = coin_Calc 
+
+        result == 10
+        self.assertEqual(result, True)
