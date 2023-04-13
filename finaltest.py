@@ -9,11 +9,17 @@ class coin_CalcTest(unittest.TestCase):
         
         self.assertEqual(result, (0, 0, 1, 2))
 
-    def test_if_it_eight_gives_out_come_(self):
+    def test_if_quarters_work_(self):
         
-        result = coin_Calc(8,0,0,0,0) 
+        result = coin_Calc(56,0,0,0,0) 
         
-        self.assertEqual(result, (0, 0, 1, 3))
+        self.assertEqual(result, (2, 0, 0, 6))
+
+    def test_if_it_negitive_gives_out_come_(self):
+        
+        result = coin_Calc(-8,0,0,0,0) 
+        
+        self.assertEqual(result, (0, 0, 0, 0))
 
 if __name__ == '__main__':
    unittest.main()
