@@ -20,6 +20,20 @@ class coin_CalcTest(unittest.TestCase):
         result = coin_Calc(-8,0,0,0,0) 
         
         self.assertEqual(result, (0, 0, 0, 0))
+    
+    def test_if_negitive_gives_coins_outcome_(self):
+        
+        result = coin_Calc(-8,0,0,0,0) 
+        
+        self.assertNotEqual(result, (0, 5, 2, 0))
+        
+    def test_if_pennies_work_(self):
+        
+        result = coin_Calc(1,0,0,0,0) 
+        
+        self.assertEqual(result, (0, 0, 0, 1))
+
+    
 
 if __name__ == '__main__':
    unittest.main()
