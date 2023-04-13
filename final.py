@@ -9,18 +9,8 @@ c = 0
 
 
 def coin_Calc(c, quarter, dime, nickel, penny):
-    """This method calculates the amount of coins provided by the user and divides 
-    them by quarters, dimes, nickel, and pennies. 
-    @param c this is the users coin input
-    @param quarter this provides the user the quarters outcome change 
-    @param dime this provides the user the dime outcome change
-    @param nickel this provides the user the nickel outcome change
-    @param penny this provides the user the penny outcome change
-    """
     if c >= 0:
-        """This if statement sets the varible that is greater than or equal to zero
-        to run the floor division of quarters, dimes, nickel, pennies. 
-        """
+        
         if c >= 25:
             """This if statement 
             """
