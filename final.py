@@ -16,6 +16,7 @@ def coin_Calc(c, quarter, dime, nickel, penny):
     @param dime this provides the user the dime outcome change
     @param nickel this provides the user the nickel outcome change
     @param penny this provides the user the penny outcome change
+    @author Marwa Hammami
     """
     if c >= 0:
         """This if statement sets the varible that is greater than or equal to zero
