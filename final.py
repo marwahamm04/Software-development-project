@@ -9,23 +9,23 @@ c = 0
 
 
 def coin_Calc(c, quarter, dime, nickel, penny):
-    
+
     if c >= 0:
         if c >= 25:
 
             quarter = c // 25
             c = c - 25 * quarter
-            penny = c 
+            penny = c
         elif c >= 10:
             dime = c // 10
             c = c - 10 * dime
-            penny = c 
+            penny = c
         elif c >= 5:
             nickel = c // 5
             c = c - 5 * nickel
-            penny = c 
+            penny = c
         else:
-            penny = c 
+            penny = c
     else:
         c = 0
     return quarter, dime, nickel, penny
