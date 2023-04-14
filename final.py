@@ -12,8 +12,7 @@ def coin_Calc(c, quarter, dime, nickel, penny):
     
     if c >= 0:
         if c >= 25:
-            """This if statement 
-            """
+
             quarter = c // 25
             c = c - 25 * quarter
             penny = c 
