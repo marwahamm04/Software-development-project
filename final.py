@@ -22,11 +22,13 @@ def coin_Calc(c, quarter, dime, nickel, penny):
         """This if statement sets the varible that is greater than or equal to zero
         to run the floor division of quarters, dimes, nickel, pennies. And the leftover 
         will turn into pennies.
+        @author Marwa Hammami
         """
         if c >= 25:
             """This if statement informs the user that if a number is greater than or
             equal to tweenty-five, it will go through the equation. And the leftover
             will turn into pennies. 
+            @author Marwa Hammami
             """
             quarter = c // 25
             c = c - 25 * quarter
@@ -34,7 +36,8 @@ def coin_Calc(c, quarter, dime, nickel, penny):
         elif c >= 10:
             """This if statement informs the user that if a number is greater than or
             equal to ten, it will go through the equation. And the leftover
-             will turn into pennies.
+            will turn into pennies.
+            @author Marwa Hammami
             """
             dime = c // 10
             c = c - 10 * dime
@@ -43,13 +46,22 @@ def coin_Calc(c, quarter, dime, nickel, penny):
             """This if statement informs the user that if a number is greater than or
             equal to five, it will go through the equation. And the leftover 
             will turn into pennies.
+            @author Marwa Hammami
             """
             nickel = c //5
             c = c - 5 * nickel
             penny = c 
         else:
+            """This statement turns the left over coins that dont pass through
+            quarters, dimes, and nickels into pennies
+            @author Marwa Hammami
+            """
             penny = c 
     else:
+        """This statmetn clarifies that there should be zero change left after 
+        going through the funuction and that it should return quarters, dimes, nickels, and pennies
+        @author Marwa Hammami
+        """
         c = 0
     return quarter, dime, nickel, penny
       

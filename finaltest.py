@@ -21,7 +21,7 @@ class coin_CalcTest(unittest.TestCase):
         
         self.assertEqual(result, (0, 0, 0, 0))
     
-    def test_if_negitive_gives_coins_outcome_(self):
+    def test_if_error_works_(self):
         
         result = coin_Calc(-8,0,0,0,0) 
         
@@ -30,7 +30,7 @@ class coin_CalcTest(unittest.TestCase):
     def test_if_pennies_work_(self):
         
         result = coin_Calc(1,0,0,0,0) 
-        
+
         self.assertEqual(result, (0, 0, 0, 1))
 
     
